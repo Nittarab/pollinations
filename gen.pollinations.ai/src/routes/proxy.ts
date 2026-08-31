@@ -647,6 +647,7 @@ export const proxyRoutes = new Hono<Env>()
                 "Generate text responses using AI models. Fully compatible with the OpenAI Chat Completions API — use any OpenAI SDK by pointing it to `https://gen.pollinations.ai`.",
                 "",
                 "Supports streaming, function calling, vision (image input), structured outputs, and reasoning/thinking modes depending on the model.",
+                "Anonymous calls can pay per request with x402. Send a non-empty `Idempotency-Key`; the x402 shape requires non-streaming text input and an explicit `max_tokens` cap from 1 to 4096.",
             ].join("\n"),
             responses: {
                 200: {
